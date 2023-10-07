@@ -1,0 +1,1 @@
+print(' '.join(str(x) for x in sorted(set(int(x) for x in input().split(' ')).intersection(set(int(x) for x in input().split(' '))))))
