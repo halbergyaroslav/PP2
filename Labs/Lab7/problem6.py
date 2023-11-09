@@ -3,12 +3,10 @@ import re
 with open('row.txt', 'r', encoding="utf8") as file:
     lines = file.readlines()
 
-patterns = 'a.*?b$'
+for i in range(len(lines)):
+    lines[i] = re.sub("[ ,.]", ":", lines[i])
 
-for line in lines:
-    re.sub("[ ,.]", ":", line)
-    
-with open('text.txt', 'w') as fp:
+with open('text.txt', 'w', encoding="utf8") as fp:
     for line in lines:
         fp.write(line + '\n')
     
