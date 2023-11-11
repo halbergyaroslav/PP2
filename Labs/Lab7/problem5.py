@@ -3,10 +3,10 @@ import re
 with open('row.txt', 'r', encoding="utf8") as file:
     lines = file.readlines()
 
-patterns = 'a.*?b$'
+pattern = 'a.*?b$'
 
 for line in lines:
-    findings = re.search(patterns, line)
+    findings = re.search(pattern, line)
     if findings: print(findings.string)
 
 file.close()
