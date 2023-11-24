@@ -65,6 +65,8 @@ def player_status(num):
 
     pygame.draw.rect(screen, (255, 255, 255), (47, 67, 303, 303), 5)
 
+start = 0
+
 def game():
     running = True
     is_playing = False
@@ -76,6 +78,13 @@ def game():
     while running:
         screen.blit(background, (0, 0))
         pygame.draw.rect(screen, (25, 25, 25), (0, 470, 400, 400))
+        
+        global start
+        
+        if start == 0: player_status(1)
+        else:
+            screen.blit(background, (0, 0))
+            pygame.draw.rect(screen, (25, 25, 25), (0, 470, 400, 400))
 
         if is_playing:
             play_button = screen.blit(pause_button_img, (165, 490))
@@ -89,6 +98,7 @@ def game():
             if event.type == pygame.QUIT:
                 running = False
             if event.type == pygame.MOUSEBUTTONDOWN:
+                start = 1
                 x, y = event.pos
                 if play_button.collidepoint(x, y):
                     if is_playing:
