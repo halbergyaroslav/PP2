@@ -76,3 +76,72 @@ def my_function(**kid):
 
 my_function(fname = "Tobias", lname = "Refsnes")
 ```
+
+### Dictionaries
+
+Dictionaries are used to store data values in key:value pairs.
+
+```python
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+print(type(thisdict))
+```
+
+The keys() method will return a list of all the keys in the dictionary.
+
+The values() method will return a list of all the values in the dictionary.
+
+The items() method will return each item in a dictionary, as tuples in a list.
+
+```python
+x = thisdict.keys()
+
+x = thisdict.values()
+
+x = thisdict.items()
+```
+
+Adding new value
+
+```python
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+
+thisdict["color"] = "red"
+print(thisdict)
+```
+
+Deleting value
+
+```python
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+
+del thisdict["model"]
+print(thisdict)
+```
+
+Sorting values
+
+Sorting values without any extra parameters, sorts key values.
+
+```python
+>>> people = {3: "Jim", 2: "Jack", 4: "Jane", 1: "Jill"}
+
+>>> # Sort by key
+>>> dict(sorted(people.items()))
+{1: 'Jill', 2: 'Jack', 3: 'Jim', 4: 'Jane'}
+
+>>> # Sort by value
+>>> dict(sorted(people.items(), key=lambda item: item[1]))
+{2: 'Jack', 4: 'Jane', 1: 'Jill', 3: 'Jim'}
+```
