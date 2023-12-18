@@ -1,5 +1,54 @@
 ## Quiz 1
 
+### Syntax
+
+Normal syntax
+
+```python
+if 5 > 2:
+  print("Five is greater than two!")
+```
+
+Syntax error
+
+```python
+if 5 > 2:
+print("Five is greater than two!")
+```
+
+Normal syntax
+
+```python
+if 5 > 2:
+ print("Five is greater than two!") 
+if 5 > 2:
+        print("Five is greater than two!") 
+```
+
+Syntax error
+
+```python
+if 5 > 2:
+ print("Five is greater than two!")
+        print("Five is greater than two!")
+```
+
+### Numerical data types
+
+There are three numeric types in Python:
+
+- int
+- float
+- complex
+
+Int, or integer, is a whole number, positive or negative, without decimals, of unlimited length.
+
+Float, or "floating point number" is a number, positive or negative, containing one or more decimals.
+
+Complex numbers are written with a "j" as the imaginary part.
+
+Priority: complex > float > integer
+
 ### Sets
 
 ```python
