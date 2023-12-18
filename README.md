@@ -192,3 +192,41 @@ thislist.extend(thistuple)
 
 print(thislist)
 ```
+
+Remove elements 
+
+The remove() method removes the specified item.
+
+```python
+thislist = ["apple", "banana", "cherry"]
+thislist.remove("banana")
+
+print(thislist)
+```
+
+The pop() method removes the specified index.
+
+```python
+thislist = ["apple", "banana", "cherry"]
+thislist.pop(1)
+
+print(thislist)
+```
+
+The del keyword also removes the specified index:
+
+```python
+thislist = ["apple", "banana", "cherry"]
+del thislist[0]
+
+print(thislist)
+```
+
+The clear() method empties the list.
+
+```python
+thislist = ["apple", "banana", "cherry"]
+thislist.clear()
+
+print(thislist)
+```
