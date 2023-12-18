@@ -509,8 +509,8 @@ Metacharacters are characters with a special meaning:
 - .	  Any character (except newline character)
 - ^	  Starts with
 - $	  Ends with
-- *	  Zero or more occurrences
-- +	  One or more occurrences
+- .*.	  Zero or more occurrences
+- .+.	  One or more occurrences
 - ?	  Zero or one occurrences
 - {}	Exactly the specified number of occurrences
 - |	  Either or
@@ -606,3 +606,5 @@ print(x)
 ```
 
 You can control the number of replacements by specifying the count parameter.
+
+## Quiz 4
