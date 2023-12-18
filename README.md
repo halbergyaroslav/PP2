@@ -88,6 +88,10 @@ x = lambda a : a + 10
 print(x(5))
 ```
 
+Lambda function - an anonymous function defined using the keyword 'lambda'.
+
+Lambda function can be used in filter() or ma() by directly passing the lambda function without a name
+
 ### Function arguments
 
 By default, a function must be called with the correct number of arguments. Meaning that if your function expects 2 arguments, you have to call the function with 2 arguments, not more, and not less.
@@ -356,7 +360,7 @@ p1 = Person("John", 36)
 p1.myfunc()
 ```
 
-Mdoify class objects
+Modify class objects
 
 ```python
 p1.age = 40
@@ -416,10 +420,80 @@ Inherit methods of parents class:
 class ParentClass:
     def do_something(self):
         print("ParentClass is doing something")
+
 class ChildClass(ParentClass):
     def do_something(self):
         super().do_something()
         print("ChildClass is doing something")
+
 child = ChildClass()
 child.do_something()
+```
+
+Child methods overwrite parent class methods:
+
+```python
+class ParentClass:
+    def do_something(self):
+        print("ParentClass is doing something")
+
+class ChildClass(ParentClass):
+    def do_something(self):
+        print("ChildClass is doing something")
+
+child = ChildClass()
+child.do_something()
+
+#ChildClass is doing something
+```
+
+### Generator vs. Iterator
+
+In Python, a generator is a function that returns an iterator that produces a sequence of values when iterated over. Generators are useful when we want to produce a large sequence of values, but we don't want to store all of them in memory at once.
+
+In Python, similar to defining a normal function, we can define a generator function using the def keyword, but instead of the return statement we use the yield statement.
+
+```python
+def generator_name(arg):
+    # statements
+    yield something
+```
+
+An iterator is an object that contains a countable number of values. An iterator is an object that can be iterated upon, meaning that you can traverse through all the values. Technically, in Python, an iterator is an object which implements the iterator protocol, which consist of the methods __iter__() and __next__().
+
+```python
+mytuple = ("apple", "banana", "cherry")
+myit = iter(mytuple)
+
+print(next(myit))
+print(next(myit))
+print(next(myit))
+```
+
+### Built-in functions
+
+ISINSTANCE
+
+The isinstance() function is a built-in feature in Python, widely used for type checking. It requires two parameters: the initial is the object under scrutiny, and the second is the type you wish to compare against. Here’s the basic syntax:
+
+```python
+s = 'Hello, World!'
+print(isinstance(s, str))  # Output: True
+
+l = [1, 2, 3]
+print(isinstance(l, list))  # Output: True
+
+b = False
+print(isinstance(b, bool))  # Output: True
+```
+
+The dir() function returns all properties and methods of the specified object, without the values. This function will return all the properties and methods, even built-in properties which are default for all object.
+
+```python
+class Person:
+  name = "John"
+  age = 36
+  country = "Norway"
+
+print(dir(Person))
 ```
